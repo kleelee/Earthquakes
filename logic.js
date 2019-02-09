@@ -9,8 +9,8 @@ d3.json(geoJSONdata, function(data) {   createFeatures(data.features);
 function createFeatures(earthquakeData) {
 
 function onEachFeature(feature, layer) {
-  layer.bindPopup("<h3>" + "Location: " + feature.properties.mag+
-    "</h3><hr><h3>" + "Games: " + feature.properties.place + "</h3>");
+  layer.bindPopup("<h3>" + "Location: " + feature.properties.place+
+    "</h3><hr><h3>" + "Magnitude: " + feature.properties.mag + "</h3>");
 } 
 
 function markerColor(mag) {
